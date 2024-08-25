@@ -48,8 +48,15 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
+    // WidgetsBinding.instance.addPostFrameCallback((_) async {
+    //   await FirebaseMessaging.instance.getToken().then((fbToken) {
+    //     FFAppState().fcm = fbToken ?? 'null';
+    //   });
+    //
+    // });
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
+    setLocale(FFAppState().selectedLanguge);
   }
 
   void setLocale(String language) {

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../pages/about_us_page/about_us_page_widget.dart';
 import '../../pages/thank_page/thank_page_widget.dart';
 import '/backend/schema/structs/index.dart';
 
@@ -53,6 +54,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'QuestionPage',
           path: '/questionPage',
           builder: (context, params) => const QuestionPageWidget(),
+        ),
+        FFRoute(
+          name: 'AboutUsPageWidget',
+          path: '/aboutUsPageWidget',
+          builder: (context, params) => const AboutUsPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

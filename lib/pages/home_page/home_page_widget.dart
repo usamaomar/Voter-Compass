@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+import '../cusom_app_bar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -38,7 +39,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -50,6 +50,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           actions: const [],
+          leading: CusomAppBar(),
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -83,7 +84,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                   child: Container(
                     decoration: const BoxDecoration(
                       color: Color(0xFFF2EAE9),
@@ -109,7 +111,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: SvgPicture.asset(
-                                    'assets/images/Layer_2.svg',
+                                    'assets/images/Layer_4.svg',
                                     width: 68.0,
                                     height: 82.0,
                                     fit: BoxFit.contain,
@@ -129,8 +131,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               children: [
                                 Flexible(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         '44cpvh7g' /* Voter Compass */,
@@ -185,7 +188,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 20.0, 20.0, 20.0),
+                                      20.0, 20.0, 20.0, 10.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       FFAppState().updateMainQustionModelStruct(
@@ -201,18 +204,66 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          24.0, 0.0, 24.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          Color(0x00FF404042),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
+                                            letterSpacing: 0.0,
+                                          ),
+                                      elevation: 3.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Flexible(
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      20.0, 5.0, 20.0, 20.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                       context.pushNamed('AboutUsPageWidget');
+                                    },
+                                    text: FFLocalizations.of(context)
+                                        .getVariableText(
+                                            enText: 'About Us',
+                                            arText: 'معلومات عن البوصلة'),
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color:
+                                          const Color(0x00FFF1BD88),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: const Color(0X00ff404042),
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,

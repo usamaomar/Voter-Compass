@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '/backend/schema/structs/index.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
@@ -15,11 +16,34 @@ class FFAppState extends ChangeNotifier {
     _instance = FFAppState._internal();
   }
 
-  Future initializePersistedState() async {}
+  late SharedPreferences prefs;
+
+  Future initializePersistedState() async {
+    prefs = await SharedPreferences.getInstance();
+    _safeInit(() {
+      _selectedLanguge = prefs.getString('ff_selectedLanguge') ?? _selectedLanguge;
+    });
+
+  }
 
   void update(VoidCallback callback) {
     callback();
     notifyListeners();
+  }
+
+  String _selectedLanguge = 'en';
+
+  String get selectedLanguge => _selectedLanguge;
+
+  set selectedLanguge(String value) {
+    _selectedLanguge = value;
+    prefs.setString('ff_selectedLanguge', value);
+  }
+
+  void _safeInit(Function() initializeField) {
+    try {
+      initializeField();
+    } catch (_) {}
   }
 
   MainQustionModelStruct _mainQustionModel =
