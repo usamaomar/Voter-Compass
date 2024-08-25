@@ -1,0 +1,1 @@
+ /Users/usamaomar/Downloads/Programming/Voter-Compass/.dart_tool/flutter_build/dd2b86c81bb49efe662cfde6b28f0c86/native_assets.yaml: 
