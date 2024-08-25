@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../pages/thank_page/thank_page_widget.dart';
 import '/backend/schema/structs/index.dart';
 
 import '/index.dart';
@@ -42,6 +43,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => const HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'ThankPageWidget',
+          path: '/thankPageWidget',
+          builder: (context, params) => const ThankPageWidget(),
         ),
         FFRoute(
           name: 'QuestionPage',

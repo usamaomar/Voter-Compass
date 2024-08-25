@@ -118,7 +118,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jw49qfj8': {
       'en':
           'Our app is designed to help you navigate the complexities of elections by matching your views with those of candidates and political parties. By answering a few questions about your political preferences, you\'ll receive personalized recommendations that align with your values.',
-      'ar': '',
+      'ar': 'يهدف تطبيقنا إلى مساعدتك في التنقل عبر تعقيدات الانتخابات من خلال مطابقة آرائك مع آراء المرشحين والأحزاب السياسية. من خلال الإجابة على بعض الأسئلة حول تفضيلاتك السياسية، ستحصل على توصيات مخصصة تتماشى مع قيمك.',
     },
     'akf6x5on': {
       'en': 'Start  quiz',
@@ -133,7 +133,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'a0axn9vi': {
       'en': 'Voter Advice Application',
-      'ar': '',
+      'ar': 'تطبيق مشورة الناخبين',
     },
     '7iufwmmu': {
       'en': 'Back',

@@ -267,7 +267,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                   20.0, 20.0, 20.0, 20.0),
                               child: FFButtonWidget(
                                 onPressed: () {
-                                  print('Button pressed ...');
+                                  context.pushNamed('ThankPageWidget');
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   'x1o88i2q' /* Submit */,

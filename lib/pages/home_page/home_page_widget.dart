@@ -1,8 +1,13 @@
+import 'package:fl_chart/fl_chart.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'custom_painter.dart';
+import 'dot.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -33,6 +38,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     super.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -57,8 +63,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 50.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'unvtxnga' /* Voter Advice Application */,
