@@ -49,8 +49,15 @@ class _SelectionWidgetState extends State<SelectionWidget> {
   @override
   Widget build(BuildContext context) {
     return FlutterFlowRadioButton(
-      options: <String>[].toList(),
-      onChanged: widget.parameter3! ? null : (val) => setState(() {}),
+      options: <String>[
+        FFLocalizations.of(context).getVariableText(
+          enText: widget.parameter1,
+          arText: widget.parameter2,
+        )
+      ].toList(),
+      onChanged: (val) => setState(() {
+
+      }),
       controller: _model.radioButtonValueController ??=
           FormFieldController<String>(
               FFLocalizations.of(context).getVariableText(
