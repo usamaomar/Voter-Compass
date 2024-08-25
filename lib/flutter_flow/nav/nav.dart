@@ -47,6 +47,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'QuestionPage',
           path: '/questionPage',
           builder: (context, params) => const QuestionPageWidget(),
+        ),
+        FFRoute(
+          name: 'page',
+          path: '/page',
+          builder: (context, params) => const PageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

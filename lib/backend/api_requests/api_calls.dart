@@ -38,12 +38,12 @@ class TokenApiCallCall {
       token: token,
     );
 
-    const ffApiRequestBody = '''
+    final ffApiRequestBody = '''
 {
-  "fcm_token": "dsdsdsd",
-  "app_version": "01.01.017",
-  "os_type": "ios",
-  "lang": "ar"
+  "fcm_token": "$fcmToken",
+  "app_version": "$appVersion",
+  "os_type": "$osType",
+  "lang": "$lang"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'TokenApiCall',

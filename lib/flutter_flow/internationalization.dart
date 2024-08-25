@@ -152,6 +152,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // page
+  {
+    'k8sl3vhd': {
+      'en': 'Page Title',
+      'ar': '',
+    },
+    '0a2hci8s': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
   // Miscellaneous
   {
     'lfvs7c5w': {
