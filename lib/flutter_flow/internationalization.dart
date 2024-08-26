@@ -124,6 +124,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Start  quiz',
       'ar': 'ابدأ الاختبار',
     },
+    '2i8rzl5s': {
+      'en': 'share',
+      'ar': '',
+    },
     'sn3zdb7u': {
       'en': 'Home',
       'ar': '',
